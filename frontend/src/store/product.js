@@ -42,7 +42,8 @@ export const useProductStore = create((set) => ({
             },
             body: JSON.stringify(updatedProduct),
         });
-        const data = await res.json();
+        const data = await res.json(); 
+
         if (!data.success) return { success: false, message: data.message };
 
         // update the ui immediately, without needing a refresh
